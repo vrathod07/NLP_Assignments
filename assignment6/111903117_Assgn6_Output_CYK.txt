@@ -1,0 +1,66 @@
+This is the grammar used: 
+S->NP VP
+PP->P NP
+VP->V NP
+VP->VP PP
+NP->NP PP  
+NP->astronomers
+NP->ears
+NP->saw
+NP->telescope
+NP->stars
+P->with
+V->saw
+
+
+Sentence: astronomers saw stars with telescope
+
+The genrated parse table is: 
+
+['NP'] [''] ['S'] [''] ['S'] 
+
+[''] ['NP', 'V'] ['VP'] [''] ['VP'] 
+
+[''] [''] ['NP'] [''] [''] 
+
+[''] [''] [''] ['P'] ['PP'] 
+
+[''] [''] [''] [''] ['NP'] 
+
+
+
+The sentence belongs to the grammar
+
+Sentence: astronomers saw stars with ears
+
+The genrated parse table is: 
+
+['NP'] [''] ['S'] [''] ['S'] 
+
+[''] ['NP', 'V'] ['VP'] [''] ['VP'] 
+
+[''] [''] ['NP'] [''] [''] 
+
+[''] [''] [''] ['P'] ['PP'] 
+
+[''] [''] [''] [''] ['NP'] 
+
+
+
+The sentence belongs to the grammar
+
+Sentence: astronomers saw stars 
+
+The genrated parse table is: 
+
+['NP'] [''] ['S'] [''] 
+
+[''] ['NP', 'V'] ['VP'] [''] 
+
+[''] [''] ['NP'] [''] 
+
+[''] [''] [''] [] 
+
+
+
+The sentence does not belong to the grammar
